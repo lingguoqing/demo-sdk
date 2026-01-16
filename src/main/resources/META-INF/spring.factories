@@ -1,2 +1,2 @@
 # spring boot starter
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=com.wfql.wfqlsdk.WfqlEmailSdkConfig
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=com.demo.demosdk.DemoEmailSdkConfig

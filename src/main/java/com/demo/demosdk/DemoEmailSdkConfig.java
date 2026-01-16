@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
 @ConfigurationProperties("demo.email")
 @Data
 @ComponentScan
-public class WfqlEmailSdkConfig {
+public class DemoEmailSdkConfig {
 
     private String smtpServer;
     private String fromEmailKey;
@@ -19,7 +19,7 @@ public class WfqlEmailSdkConfig {
     private Boolean debug;
 
     @Bean
-    public DemoEmailClient wfqlAppClient() {
+    public DemoEmailClient demoTest() {
         return new DemoEmailClient(smtpServer, fromEmailKey, fromEmailAddres, debug);
     }
 

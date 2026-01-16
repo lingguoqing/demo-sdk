@@ -3,6 +3,7 @@ package com.demo.demosdk.client;
 
 import com.demo.demosdk.utils.SendEmailUtil;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,7 +21,7 @@ public class DemoEmailClient {
     private String smtpServer;
     private String fromEmailKey;
     private String fromEmailAddres;
-    private Boolean debug = false;
+    private Boolean debug;
 
 
     public DemoEmailClient() {
@@ -37,6 +38,10 @@ public class DemoEmailClient {
 
     public void sendEmail(List<String> toEmailAddressList, String subject, String context) throws Exception {
         this.sendEmail(this.fromEmailAddres, toEmailAddressList, subject, context, new ArrayList<>(), debug);
+    }
+
+    public void sendEmail(List<String> toEmailAddressList,List<String> copyEmailAddressList, String subject, String context) throws Exception {
+        this.sendEmail(this.fromEmailAddres, toEmailAddressList, subject, context, copyEmailAddressList, debug);
     }
 
     /**
